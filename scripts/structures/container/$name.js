@@ -6,7 +6,7 @@ export default class Root extends Component {
   	
     return (
       <div className={css.hello}>
-      	Root container
+      	{{name}} container
       </div>
     )
   }

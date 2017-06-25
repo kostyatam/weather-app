@@ -58,6 +58,12 @@ module.exports = {
 		inject: true
 	})
 	],
+	resolve: {
+		alias: {
+			containers: path.join(__dirname, 'app/containers'),
+			components: path.join(__dirname, 'app/components')
+		}
+	},
 	devServer: {
 	  contentBase: path.join(__dirname, 'build'),
 	  port: 9000

@@ -1,9 +1,9 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Root from './Root';
+import {{name}} from './{{name}}';
 
-export default connect(mapStateToProps, mapDispatchToProps)(Root);
+export default connect(mapStateToProps, mapDispatchToProps)({{name}});
 
 function mapStateToProps (state) {
 	return {}
