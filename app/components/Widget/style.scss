@@ -1,0 +1,42 @@
+.widget {
+	width: 100%;
+	padding: 10px 20px;
+	display: flex;
+	flex-flow: column nowrap;
+	background-color: #6ca3ff;
+
+	&Row {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+
+		&Item {
+			flex: 0 0 auto;
+		}
+	}
+
+	&Icon {
+		width: 40px;
+		height: 40px;
+	}
+
+	&Descr {
+
+	}
+
+	&City {
+		color: #fff;
+		font-size: 16px;
+		line-height: 1;
+	}
+
+	&Country {
+		color: #fff;
+	}
+
+	&Temperature {
+		color: #fff;
+		font-size: 30px;
+	}
+}
