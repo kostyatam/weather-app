@@ -26,8 +26,10 @@
     "mocha": "^3.4.2",
     "mustache": "^2.3.0",
     "mz": "^2.6.0",
+    "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "postcss-scss": "^1.0.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"

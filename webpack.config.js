@@ -18,7 +18,7 @@ module.exports = {
 				include: path.resolve(__dirname, 'app')
 			},
 			{
-				test: /\.css$/,
+				test: /\.css$|\.scss$/,
 				use: ExtractTextPlugin.extract({
 		          fallback: 'style-loader',
 		          use: [
@@ -26,6 +26,7 @@ module.exports = {
 		            	loader: 'css-loader', 
 		            	options: {
 		            		importLoaders: 1,
+		            		localIdentName: '[local]--[hash:base64:3]',
 		            		modules: true 
 		            	} 
 		            },
@@ -37,10 +38,19 @@ module.exports = {
 	            			],
 	            			parser: 'postcss-scss'
 		            	}
+		            },
+		            {
+		            	loader: 'sass-loader',
+		            	options: {
+		            		includePaths: [
+		            		path.resolve(__dirname, 'app', 'styles')
+		            		]
+		            	}
 		            }
 		          ]
 		        }),
-				include: path.resolve(__dirname, 'app')
+				include: path.resolve(__dirname, 'app'),
+				exclude: path.resolve(__dirname, 'node_modules')
 			},
 			{
 				test: /\.html$/,
