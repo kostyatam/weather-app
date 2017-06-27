@@ -4,12 +4,22 @@
 	display: flex;
 	flex-flow: column nowrap;
 	background-color: #6ca3ff;
+	color: #fff;
 
 	&Row {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&_weatherInfo {
+			align-items: flex-end;
+		}
 
 		&Item {
 			flex: 0 0 auto;
@@ -22,21 +32,34 @@
 	}
 
 	&Descr {
+		font-size: 12px;
+	}
 
+	&Place {
+		display: flex;
+		flex-flow: column nowrap;
+		align-content: flex-end;
+
+		&Item {
+			margin-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&City {
-		color: #fff;
 		font-size: 16px;
 		line-height: 1;
 	}
 
 	&Country {
-		color: #fff;
+		font-size: 12px;
 	}
 
 	&Temperature {
-		color: #fff;
 		font-size: 30px;
+		line-height: 1;
 	}
 }

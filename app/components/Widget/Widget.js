@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import css from './style.scss';
-console.log(css);
+import cn from 'classnames';
+
 export default class Widget extends PureComponent {
 	render () {
 		return (
@@ -11,8 +12,22 @@ export default class Widget extends PureComponent {
 						<div className={css.widgetIcon}></div>
 					</div>
 					<div className={css.widgetRowItem}>
-						<div className={css.widgetCity}>Moscow</div>
-						<div className={css.widgetCountry}>Russia</div>
+						<div className={css.widgetPlace}>
+							<div className={cn(css.widgetCity, css.widgetPlaceItem)}>Moscow</div>
+							<div className={cn(css.widgetCountry, css.widgetPlaceItem)}>Russia</div>
+						</div>
+					</div>
+				</div>
+				<div className={cn(css.widgetRow, css.widgetRow_weatherInfo)}>
+					<div className={css.widgetRowItem}>
+						<div className={css.widgetDescr}>
+							Cloudy
+						</div>
+					</div>
+					<div className={css.widgetRowItem}>
+						<div className={css.widgetTemperature}>
+							-10°
+						</div>
 					</div>
 				</div>
 			</div>
