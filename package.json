@@ -1,7 +1,7 @@
 {
-  "name": "seed",
+  "name": "weather-app",
   "version": "0.0.1",
-  "description": "",
+  "description": "simple useless weather app:)",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha",
@@ -18,6 +18,7 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^4.0.2",
     "chai-fs": "^1.0.0",
+    "classnames": "^2.2.5",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "html-loader": "^0.4.5",
