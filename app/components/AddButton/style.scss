@@ -1,0 +1,46 @@
+.addButton {
+    border: 1px dashed #999;
+    border-radius: 5px;
+    position: relative;
+    padding: 50px 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+
+    &:hover {
+        border-color: darken(#999, 30%);
+        background-color: rgba(#cacaca, .2);
+        box-shadow: 5px 5px 50px -14px rgba(0,0,0,0.75);
+        top: -1px;
+        left: -1px;
+
+        &:after, &:before {
+            background-color: darken(#999, 10%);
+        }
+    }
+
+    &:active {
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        transition: all .5s;
+    }
+
+    &:after, &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -10px;
+        margin-left: -1px;
+        width: 2px;
+        height: 20px;
+        background-color: #999;
+        transition: background-color 1s;
+    }
+
+    &:before {
+        transform: rotate(90deg);
+    }
+}

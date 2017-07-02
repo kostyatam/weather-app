@@ -50,7 +50,7 @@ function parseArgs (argv) {
 	
 	return {
 		type,
-		name: name.toUpperCase()[0] + name.slice(1).toLowerCase()
+		name: name.toUpperCase()[0] + name.slice(1)
 	}
 }
 

@@ -1,0 +1,11 @@
+.root {
+    padding: 12px;
+
+    &Item {
+        margin-bottom: 12px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
