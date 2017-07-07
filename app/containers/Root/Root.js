@@ -3,23 +3,29 @@ import css from './style.scss';
 
 import components from 'components';
 
-const { Widget, AddButton } = components;
+const { Widget, AddButton, City } = components;
 
 export default class Root extends Component {
   render () {
-    const cities = this.props.cities;
-    
     return (
       <div className={css.root}>
       	<div className={css.rootItem}>
-          {cities.map(city => <Widget key={city.id} name={city.name} country={city.country} temp={city.temp}/>)}
+          {this.citiesList()}
         </div>
         <div className={css.rootItem}>
           <AddButton/>
         </div>
+        <div className={css.rootItem}>
+          <City/>
+        </div>
       </div>
     )
   }
+
+  citiesList () {
+    return this.props.cities.map(city => <Widget key={city.id} name={city.name} country={city.country} temp={city.temp}/>)
+  }
+
   componentWillMount () {
     this.props.actions.init();
   }

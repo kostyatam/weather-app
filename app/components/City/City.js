@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 import css from './style.scss';
 
 export default class City extends PureComponent {
@@ -7,10 +8,10 @@ export default class City extends PureComponent {
 		return (
 			<div className={css.city}>
 				<div className={css.cityPlace}>
-					<div className={css.cityName}>
+					<div className={cn(css.cityPlaceItem, css.cityName)}>
 						new york
 					</div>
-					<div className={css.cityCountry}>
+					<div className={cn(css.cityPlaceItem, css.cityCountry)}>
 						u.s.a
 					</div>
 				</div>
@@ -23,9 +24,15 @@ export default class City extends PureComponent {
 					</div>
 				</div>
 				<div className={css.cityDetails}>
-					<div className={css.cityDetailsTemp}></div>
-					<div className={css.cityDetailsHumidity}></div>
-					<div className={css.cityDetailsWind}></div>
+					<div className={cn(css.cityDetailsItem, css.cityTemp)}>
+						15°
+					</div>
+					<div className={cn(css.cityDetailsItem, css.cityHumidity)}>
+						50%
+					</div>
+					<div className={cn(css.cityDetailsItem, css.cityWind)}>
+						4 MPS
+					</div>
 				</div>
 			</div>
 		)

@@ -2,12 +2,28 @@
     color: #fff;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
     padding: 25px 15px;
+    background: #6ca3ff;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
     
     &Place {
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        right: 15px;
+        text-align: center;
         line-height: 1;
         text-transform: uppercase;
+
+        &Item {
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &Name {
@@ -21,25 +37,37 @@
     }
 
     &Weather {
-
+        display: flex;
+        flex-flow: column;
     }
 
     &Descr {
         font-size: 25px;
         text-transform: uppercase;
+        text-align: center;
     }
 
     &Details {
+        position: absolute;
+        bottom: 25px;
+        left: 15px;
+        right: 15px;
+        align-items: flex-end;
         display: flex;
         flex-flow: row nowrap;
+        justify-content: space-around;
 
-        &Temp {
-            font-size: 35px;
-            line-height: 1;
+        &Item {
+            flex: 1 1 auto;
         }
+    }
+        
+    &Temp {
+        font-size: 35px;
+        line-height: 1;
+    }
 
-        &Humidity, &Wind {
-            font-size: 10px;
-        }
+    &Humidity, &Wind {
+        font-size: 10px;
     }
 }
