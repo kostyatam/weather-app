@@ -1,0 +1,45 @@
+.city {
+    color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 25px 15px;
+    
+    &Place {
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &Name {
+        font-size: 12px;
+    }
+
+    &Country {
+        font-size: 10px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &Weather {
+
+    }
+
+    &Descr {
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+
+    &Details {
+        display: flex;
+        flex-flow: row nowrap;
+
+        &Temp {
+            font-size: 35px;
+            line-height: 1;
+        }
+
+        &Humidity, &Wind {
+            font-size: 10px;
+        }
+    }
+}
