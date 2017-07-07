@@ -6,6 +6,5 @@ export default Object
 	.filter( name => includes[name])
 	.reduce((containers, name) => {
 		containers[name] = require(`./${name}/index.js`).default;
-		console.log(containers[name])
 		return containers;
 	}, containers);

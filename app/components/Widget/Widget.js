@@ -5,6 +5,8 @@ import cn from 'classnames';
 
 export default class Widget extends PureComponent {
 	render () {
+		const { name, country, temp } = this.props;
+
 		return (
 			<div className={css.widget}>
 				<div className={css.widgetRow}>
@@ -13,8 +15,8 @@ export default class Widget extends PureComponent {
 					</div>
 					<div className={css.widgetRowItem}>
 						<div className={css.widgetPlace}>
-							<div className={cn(css.widgetCity, css.widgetPlaceItem)}>Moscow</div>
-							<div className={cn(css.widgetCountry, css.widgetPlaceItem)}>Russia</div>
+							<div className={cn(css.widgetCity, css.widgetPlaceItem)}>{name}</div>
+							<div className={cn(css.widgetCountry, css.widgetPlaceItem)}>{country}</div>
 						</div>
 					</div>
 				</div>
@@ -26,7 +28,7 @@ export default class Widget extends PureComponent {
 					</div>
 					<div className={css.widgetRowItem}>
 						<div className={css.widgetTemperature}>
-							-10°
+							{temp}°
 						</div>
 					</div>
 				</div>

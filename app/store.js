@@ -1,5 +1,5 @@
-import { createStore, combineReducers } from 'redux';
-
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import includes from './containers/includes.json';
 
 const reducers = {};
@@ -12,4 +12,4 @@ export default createStore(combineReducers(
 		reducers[name] = require(`./containers/${name}/reducers.js`).default;
 		return reducers;
 	}, reducers)
-));
+), applyMiddleware(thunk));
