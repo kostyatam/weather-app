@@ -1,6 +1,11 @@
 .root {
     padding: 12px;
 
+    &WrappingLink, &WrappingLink:hover, &WrappingLink:active {
+        display: block;
+        text-decoration: none;
+    }
+
     &Item {
         margin-bottom: 12px;
         

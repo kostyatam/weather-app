@@ -5,14 +5,16 @@ import css from './style.scss';
 
 export default class City extends PureComponent {
 	render () {
+		const { name, country, temp } = this.props;
+	
 		return (
 			<div className={css.city}>
 				<div className={css.cityPlace}>
 					<div className={cn(css.cityPlaceItem, css.cityName)}>
-						new york
+						{name}
 					</div>
 					<div className={cn(css.cityPlaceItem, css.cityCountry)}>
-						u.s.a
+						{country}
 					</div>
 				</div>
 				<div className={css.cityWeather}>
@@ -25,7 +27,7 @@ export default class City extends PureComponent {
 				</div>
 				<div className={css.cityDetails}>
 					<div className={cn(css.cityDetailsItem, css.cityTemp)}>
-						15°
+						{temp}°
 					</div>
 					<div className={cn(css.cityDetailsItem, css.cityHumidity)}>
 						50%

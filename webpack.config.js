@@ -1,6 +1,8 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
 	entry: './app/main.js',
@@ -8,6 +10,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'build'),
 		filename: '[name].bundle.js'
 	},
+	devtool: 'cheap-module-eval-source-map',
 	module: {
 		rules: [
 			{
@@ -71,11 +74,13 @@ module.exports = {
 	resolve: {
 		alias: {
 			containers: path.join(__dirname, 'app/containers'),
-			components: path.join(__dirname, 'app/components')
+			components: path.join(__dirname, 'app/components'),
+			utils: path.join(__dirname, 'app/utils'),
 		}
 	},
 	devServer: {
 	  contentBase: path.join(__dirname, 'build'),
-	  port: 9000
+	  port: 9000,
+	  historyApiFallback: true
 	}
 }

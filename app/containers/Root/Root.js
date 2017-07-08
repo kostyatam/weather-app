@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import css from './style.scss';
 
 import components from 'components';
@@ -15,15 +16,16 @@ export default class Root extends Component {
         <div className={css.rootItem}>
           <AddButton/>
         </div>
-        <div className={css.rootItem}>
-          <City/>
-        </div>
       </div>
     )
   }
 
   citiesList () {
-    return this.props.cities.map(city => <Widget key={city.id} name={city.name} country={city.country} temp={city.temp}/>)
+    return this.props.cities.map(city => (
+    <Link key={city.id}  to={`/${city.id}`} className={css.rootWrappingLink}>
+      <Widget name={city.name} country={city.country} temp={city.temp}/>
+    </Link>
+    ))
   }
 
   componentWillMount () {

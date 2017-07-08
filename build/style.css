@@ -1,0 +1,205 @@
+.addButton--3UG {
+  border: 1px dashed #999;
+  border-radius: 5px;
+  position: relative;
+  padding: 50px 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  transition: all .5s; }
+  .addButton--3UG:hover {
+    border-color: #4d4d4d;
+    background-color: rgba(202, 202, 202, 0.2);
+    box-shadow: 5px 5px 50px -14px rgba(0, 0, 0, 0.75);
+    top: -1px;
+    left: -1px; }
+    .addButton--3UG:hover:after, .addButton--3UG:hover:before {
+      background-color: gray; }
+  .addButton--3UG:active {
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    transition: all .5s; }
+  .addButton--3UG:after, .addButton--3UG:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -1px;
+    width: 2px;
+    height: 20px;
+    background-color: #999;
+    transition: background-color 1s; }
+  .addButton--3UG:before {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+.city--1yv {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 25px 15px;
+  background: #6ca3ff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  position: relative; }
+  .cityPlace--3u0 {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    right: 15px;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase; }
+    .cityPlaceItem--1GL {
+      margin-bottom: 8px; }
+      .cityPlaceItem--1GL:last-child {
+        margin-bottom: 0; }
+  .cityName--xlA {
+    font-size: 12px; }
+  .cityCountry--9FH {
+    font-size: 10px;
+    line-height: 1;
+    text-transform: uppercase; }
+  .cityWeather--10E {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column; }
+  .cityDescr--2M4 {
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center; }
+  .cityDetails--BnF {
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    right: 15px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .cityDetailsItem--1xU {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
+  .cityTemp--2b6 {
+    font-size: 35px;
+    line-height: 1; }
+  .cityHumidity--2JX, .cityWind--3jk {
+    font-size: 10px; }
+.widget--sRm {
+  width: 100%;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background-color: #6ca3ff;
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  transition: all .5s; }
+  .widget--sRm:hover {
+    box-shadow: 5px 5px 50px -14px rgba(0, 0, 0, 0.75);
+    top: -1px;
+    left: -1px; }
+  .widget--sRm:active {
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    transition: all .5s; }
+  .widgetRow--26Y {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px; }
+    .widgetRow--26Y:last-child {
+      margin-bottom: 0; }
+    .widgetRow_weatherInfo--2LC {
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+    .widgetRowItem--gZ- {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto; }
+  .widgetIcon--1hy {
+    width: 40px;
+    height: 40px; }
+  .widgetDescr--Dmr {
+    font-size: 12px; }
+  .widgetPlace--1Xu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -ms-flex-line-pack: end;
+        align-content: flex-end; }
+    .widgetPlaceItem--1ij {
+      margin-bottom: 5px; }
+      .widgetPlaceItem--1ij:last-child {
+        margin-bottom: 0; }
+  .widgetCity--29K {
+    font-size: 16px;
+    line-height: 1; }
+  .widgetCountry--bl3 {
+    font-size: 12px; }
+  .widgetTemperature--1yp {
+    font-size: 30px;
+    line-height: 1; }
+.root--3EX {
+  padding: 12px; }
+  .rootWrappingLink--263, .rootWrappingLink--263:hover, .rootWrappingLink--263:active {
+    display: block;
+    text-decoration: none; }
+  .rootItem--1G_ {
+    margin-bottom: 12px; }
+    .rootItem--1G_:last-child {
+      margin-bottom: 0; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 100; }

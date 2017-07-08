@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import css from './style.css';
 
-export default class Root extends Component {
+export default class {{name}} extends Component {
   render() {
   	
     return (

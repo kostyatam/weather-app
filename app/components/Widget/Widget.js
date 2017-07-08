@@ -5,10 +5,10 @@ import cn from 'classnames';
 
 export default class Widget extends PureComponent {
 	render () {
-		const { name, country, temp } = this.props;
+		const { name, country, temp, onClick } = this.props;
 
 		return (
-			<div className={css.widget}>
+			<div className={css.widget} onClick={onClick}>
 				<div className={css.widgetRow}>
 					<div className={css.widgetRowItem}>
 						<div className={css.widgetIcon}></div>
