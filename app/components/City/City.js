@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import css from './style.scss';
 
+import Icon from 'components/Icon';
+
 export default class City extends PureComponent {
 	render () {
-		const { name, country, temp } = this.props;
+		const { name, country, temp, humidity, wind, icon, description } = this.props;
 	
 		return (
 			<div className={css.city}>
@@ -18,11 +20,11 @@ export default class City extends PureComponent {
 					</div>
 				</div>
 				<div className={css.cityWeather}>
-					<div className={css.cityDescr}>
-						cloudy
-					</div>
 					<div className={css.cityIcon}>
-						
+						<Icon type={icon}></Icon>
+					</div>
+					<div className={css.cityDescr}>
+						{description}
 					</div>
 				</div>
 				<div className={css.cityDetails}>
@@ -30,10 +32,10 @@ export default class City extends PureComponent {
 						{temp}°
 					</div>
 					<div className={cn(css.cityDetailsItem, css.cityHumidity)}>
-						50%
+						{humidity}%
 					</div>
 					<div className={cn(css.cityDetailsItem, css.cityWind)}>
-						4 MPS
+						{wind} MPS
 					</div>
 				</div>
 			</div>

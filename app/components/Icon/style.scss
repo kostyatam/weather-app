@@ -1,0 +1,25 @@
+$list: cloudy rain snow sun thunderstorm fog;
+    
+.icon {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 100% 0 0 0;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    @each $descr in $list {
+        &_#{$descr}:after {
+            background-image: url('./images/#{$descr}.png');
+        }
+    }
+}

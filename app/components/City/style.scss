@@ -36,6 +36,11 @@
         text-transform: uppercase;
     }
 
+    &Icon {
+        width: 64px;
+        margin: 0 auto;
+    }
+
     &Weather {
         display: flex;
         flex-flow: column;
@@ -55,10 +60,10 @@
         align-items: flex-end;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
 
         &Item {
-            flex: 1 1 auto;
+            flex: 0 1 auto;
         }
     }
         
@@ -69,5 +74,18 @@
 
     &Humidity, &Wind {
         font-size: 10px;
+        line-height: 1;
+        padding: 0 0 0 13px;
+        background-repeat: no-repeat;
+        background-size: 10px 10px;
+        background-position: 0 0;
+    }
+
+    &Humidity {
+        background-image: url('./images/drop.png');
+    }
+
+    &Wind {
+        background-image: url('./images/air.png');
     }
 }

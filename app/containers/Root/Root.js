@@ -10,11 +10,11 @@ export default class Root extends Component {
   render () {
     return (
       <div className={css.root}>
-      	<div className={css.rootItem}>
-          {this.citiesList()}
-        </div>
+        {this.citiesList()}
         <div className={css.rootItem}>
-          <AddButton/>
+          <Link to={`/list`} className={css.rootWrappingLink}>
+            <AddButton/>
+          </Link>
         </div>
       </div>
     )
@@ -22,9 +22,11 @@ export default class Root extends Component {
 
   citiesList () {
     return this.props.cities.map(city => (
-    <Link key={city.id}  to={`/${city.id}`} className={css.rootWrappingLink}>
-      <Widget name={city.name} country={city.country} temp={city.temp}/>
-    </Link>
+      	<div  key={city.id} className={css.rootItem}>
+          <Link  to={`/weather/${city.id}`} className={css.rootWrappingLink}>
+            <Widget {...city}/>
+          </Link>
+        </div>
     ))
   }
 

@@ -1,7 +1,6 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { createStore, combineReducers } from 'redux';
 import includes from './containers/includes.json';
-
+import middlewares from './middlewares';
 const reducers = {};
 
 export default createStore(combineReducers(
@@ -12,4 +11,4 @@ export default createStore(combineReducers(
 		reducers[name] = require(`./containers/${name}/reducers.js`).default;
 		return reducers;
 	}, reducers)
-), applyMiddleware(thunk));
+), middlewares);

@@ -10,7 +10,7 @@ export default class Root extends Component {
 
     return (
       <div className={css.hello}>
-      	{city ? <_City name={city.name} country={city.country} temp={city.temp} /> : '...Loading' }
+      	{city ? <_City {...city} /> : '...Loading' }
       </div>
     )
   }

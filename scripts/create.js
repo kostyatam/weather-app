@@ -18,7 +18,7 @@ createEntry(params).catch(err => {
 	console.error(`${params.type} ${params.name} didn't created \n`, err);
 	return Promise.reject(err);
 }).then(() => {
-	console.log(`${params.type} ${params.name} successfully created at ${COMPONENT_DESTINATION_PATH}`);
+	console.log(`${params.type} ${params.name} successfully created at ${CONTAINER_DESTINATION_PATH}`);
 });
 
 function createEntry ({type, name}) {

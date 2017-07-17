@@ -52,12 +52,14 @@
 
 	&Descr {
 		font-size: 12px;
+		text-transform: capitalize;
 	}
 
 	&Place {
 		display: flex;
 		flex-flow: column nowrap;
 		align-content: flex-end;
+		text-align: right;
 
 		&Item {
 			margin-bottom: 5px;
