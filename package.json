@@ -12,7 +12,7 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.0.0",
@@ -40,9 +40,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
-    "url-loader": "^0.5.9"
-  },
-  "dependencies": {
+    "url-loader": "^0.5.9",
+    
     "express": "^4.15.3",
     "express-history-api-fallback": "^2.2.1",
     "http-proxy-middleware": "^0.17.4",
