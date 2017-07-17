@@ -3,7 +3,14 @@ const proxy = require('http-proxy-middleware');
 const fallback = require('express-history-api-fallback')
 const app = express();
 
-app.use('**', proxy({protocolRewrite: 'https'}));
+const PORT = 3000;
+
+app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    else
+      next()
+  })
 app.use(
     '/api',
     proxy({
@@ -18,4 +25,4 @@ app.use(
         root: __dirname + '/build'
     })
 );
-app.listen(3000);
+app.listen(PORT);
