@@ -5,6 +5,17 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.use(express.static('build'));
+
+
+app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') === 'https' || process.env.NODE_ENV !== 'production') {
+        next()
+    } else {
+        res.redirect(`https://${req.header('host')}${req.url}`);
+    }
+});
+
 app.use(
     '/api',
     proxy({
@@ -14,9 +25,11 @@ app.use(
         }
     })
 );
+
 app.use(
-    fallback('index.html', {
-        root: __dirname + '/build'
-    })
+    fallback('index.html')
 );
-app.listen(PORT);
+
+app.listen(PORT, function() {
+    console.log('Our app is running on http://localhost:' + PORT);
+});
