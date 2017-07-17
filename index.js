@@ -3,7 +3,7 @@ const proxy = require('http-proxy-middleware');
 const fallback = require('express-history-api-fallback')
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(
     '/api',
