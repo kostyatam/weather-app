@@ -27,7 +27,9 @@ app.use(
 );
 
 app.use(
-    fallback('index.html')
+    fallback('index.html', {
+        root: __dirname + '/build'
+    })
 );
 
 app.listen(PORT, function() {
