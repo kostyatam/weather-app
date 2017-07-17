@@ -7,7 +7,8 @@
     "test": "node_modules/mocha/bin/mocha",
     "start": "NODE_ENV=development node_modules/.bin/webpack-dev-server",
     "build": "NODE_ENV=production node_modules/.bin/webpack --optimize-minimize",
-    "create": "node scripts/create"
+    "create": "node scripts/create",
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -44,6 +45,9 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "express": "^4.15.3",
+    "express-history-api-fallback": "^2.2.1",
+    "http-proxy-middleware": "^0.17.4",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
