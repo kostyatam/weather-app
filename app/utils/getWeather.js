@@ -41,7 +41,7 @@ class GetWeather {
         }
 
         if (code === 800) {
-            return 'sunny';
+            return 'sun';
         }
 
         if (code < 900) {
