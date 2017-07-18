@@ -93,7 +93,7 @@ module.exports = {
             }
 		}),
 	new CompressionPlugin({
-			asset: "[name].gz",
+			asset: "[path].gz",
 			algorithm: "gzip",
 			test: /\.(js|html|css)$/,
 			threshold: 10240,
