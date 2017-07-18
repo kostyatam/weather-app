@@ -6,7 +6,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.use('/', expressStaticGzip('/build'));
+app.use('/', expressStaticGzip(__dirname + '/build'));
 
 
 app.use((req, res, next) => {
