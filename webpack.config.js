@@ -91,7 +91,14 @@ module.exports = {
             'process.env': {
                 'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
             }
-        })
+		}),
+	new CompressionPlugin({
+			asset: "[name].gz",
+			algorithm: "gzip",
+			test: /\.(js|html|css)$/,
+			threshold: 10240,
+			minRatio: 0.8
+		})
 	],
 	resolve: {
 		alias: {

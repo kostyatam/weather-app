@@ -1,11 +1,12 @@
 const express = require('express');
 const proxy = require('http-proxy-middleware');
-const fallback = require('express-history-api-fallback')
+const fallback = require('express-history-api-fallback');
+const expressStaticGzip = require("express-static-gzip");
 const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static('build'));
+app.use('/', expressStaticGzip('/build'));
 
 
 app.use((req, res, next) => {
